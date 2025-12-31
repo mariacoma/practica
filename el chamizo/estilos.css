@@ -1,0 +1,298 @@
+/* -------------------------
+   ESTILOS GENERALES
+-------------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    display: flex;              /* activa flexbox */
+    justify-content: center;    /* centra horizontal */
+    align-items: center;        /* centra vertical */
+    min-height: 100vh;          /* 100% de la altura de la ventana */
+    background-color:  #a6b85b;  /* fondo general */
+    font-family: 'Indie Flower', cursive;
+    background-image: url('/images/fondo.png'); /* Cambia esto */
+    background-repeat: no-repeat; /* No repite la imagen */
+    background-size: cover; /* Cubre todo el fondo */
+    background-position: center; /* Centra la imagen */
+    background-attachment: fixed; /* La imagen no se mueve al hacer scroll */
+    /* Opcional: Si quieres que la imagen cubra todo el viewport */
+}
+
+/* -------------------------
+   WRAPPER (CAJA CENTRAL)
+-------------------------- */
+
+.wrapper {
+    width: 80%;
+    height: 80%;
+    max-width: 1000px;
+    margin: 0px auto;
+    background-color:   #a6b85b; /* madera */
+    box-shadow: 0 0 20px black;
+    padding: 30px;
+}
+
+.wrapper-content {
+    width: 100%;
+    margin-top: 20px;
+    overflow: hidden; /* Importante: esto limpia los floats internamente */
+}
+
+/* -------------------------
+   PÁGINAS SECUDNARIAS
+-------------------------- */
+
+.no-sidebar {
+    padding-top: 10px;
+}
+
+/* -------------------------
+   HEADER
+-------------------------- */
+
+header {
+    text-align: center;
+
+}
+
+h1 a {
+    padding-bottom: 0px;
+    text-decoration: none;
+}
+
+ h1 a {
+    color: #FFF5E1;
+}
+
+/* -------------------------
+   MENÚ
+-------------------------- */
+
+nav {
+    text-align: center;
+    margin: 10px 0;
+    background-color: #807436;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav li {
+    display: inline;
+    border-left: 4px solid #a58b69; /* beige */
+    padding-left: 30px;
+    margin: 0 10px;
+}
+
+nav a {
+    color: #FFF5E1;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #D2B48C;
+    color: #3B2F2F;
+    padding: 4px;
+}
+
+/* -------------------------
+   CONTENIDO PRINCIPAL
+-------------------------- */
+
+.content {
+    float: left;     /* Se alinea a la izquierda */
+    width: 76%;      /* Ajusta el ancho según necesites */
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* -------------------------
+   IMAGEN
+-------------------------- */
+
+#image {
+    margin-left: 0px;
+}
+
+#image img {
+    width: 100%;
+    border: 2px solid #8B5E3C;
+}
+
+/* -------------------------
+   TEXTO
+-------------------------- */
+
+main p {
+    color: rgb(223, 217, 217);
+    line-height: 1.5;
+    background-color: #b49f78; /* trigo */
+    padding: 15px;
+    border: 2px solid #5C4033;
+    font-family: 'Pacifico', cursive;  /* otra fuente */
+}
+
+p a {
+    color: #807436;
+    text-decoration: underline;
+}
+
+p a:hover {
+    background-color: #FFF5E1;
+    color: #3B2F2F;
+    padding: 4px;
+}
+
+
+.autor {
+    color: #492b19;               /* otro color */
+    font-family: 'Pacifico', cursive;  /* otra fuente */
+    font-size: 0.95em;
+}
+
+/* -------------------------
+   SIDEBAR
+-------------------------- */
+
+aside {
+    margin-top: 20px;
+    color: #FFF5E1;
+}
+
+#sidebar {
+    float: right;    /* Se alinea a la derecha */
+    width: 23%;      /* Ajusta el ancho para que sume < 100% con el main */
+    position: static; /* ELIMINA el 'fixed' que tenías */
+    margin-top: 10px;
+}
+
+.sidebar-block {
+    background-color: rgb(223, 217, 217);
+    border: 2px solid #8B5E3C;
+    color: #3B2F2F;
+    padding: 15px;
+    margin-bottom: 14px; /* separa los bloques */
+}
+
+#verduras {
+    background-color: #FFF5E1; /* color distinto para el segundo bloque */
+}
+
+#procesados {
+    background-color: #e4ccde; /* color distinto para el tercer bloque */
+}
+
+.sidebar-block ul {
+    margin: 0;     /* elimina el espacio externo */
+    padding-left: 20px; /* opcional, ajusta donde empiezan los puntos */
+}
+
+.sidebar-block h3 {
+    text-decoration: underline;
+    font-family: 'Indie Flower', cursive;
+}
+
+.sidebar-block li {
+    font-family: 'Pacifico', cursive;  /* otra fuente */
+    list-style-type: none; /* Quita los puntos o números */
+}
+
+
+/* -------------------------
+   FOOTER
+-------------------------- */
+
+footer {
+    margin-top: 20px;
+    text-align: center;
+    border-top: 3px solid  #807436 ;
+    padding-top: 0px;
+    color: #FFF5E1;
+    background-color:  #807436 ;
+    clear: both;
+}
+
+/* -------------------------
+   PÁGINAS
+-------------------------- */
+
+.text-page {
+   text-align: center; 
+}
+
+
+/* -------------------------
+   MÚSICA
+-------------------------- */
+
+.jukebox-container {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 1000;
+    cursor: pointer;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro suave */
+    padding: 10px;
+    border: 3px solid #5C4033; /* Color madera oscura */
+}
+
+#jukebox-img {
+    width: 50px; /* Tamaño del bloque */
+    image-rendering: pixelated; /* Mantiene el estilo pixel art nítido */
+    transition: transform 0.2s;
+}
+
+.jukebox-container:hover #jukebox-img {
+    transform: scale(1.1); /* Se agranda un poco al pasar el ratón */
+}
+
+#music-status {
+    color: #FFF;
+    font-family: 'Indie Flower', cursive;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+/* Clase que aplicaremos con JS cuando suene la música */
+.playing {
+    border-color: #a6b85b !important; /* Cambia a verde cuando suena */
+    box-shadow: 0 0 15px #a6b85b;
+}
+
+/* -------------------------
+   RESPONSIVE
+-------------------------- */
+
+
+@media all and (max-width: 700px) {
+
+    .wrapper {
+        width: 95%;
+    }
+
+    #image {
+        float: none;
+        text-align: center;
+        margin: 0 0 15px 0;
+        border-color: #492b19
+    }
+
+    #image img {
+        width: 90%;
+    }
+
+    nav li {
+        display: block;
+        margin: 8px 0;
+        border-left: none;
+    }
+}
